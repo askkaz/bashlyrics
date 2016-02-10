@@ -1,0 +1,5 @@
+count=`cat counter.tmp`
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat demolyrics.txt))'
+printf "\e[4;35m${XYZ[$count]}\n"
+((count++))
+echo $count > counter.tmp
